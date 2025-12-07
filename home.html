@@ -6,13 +6,19 @@
     <title>Library Categories</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="category-body">
+
+    <video autoplay muted loop id="bg-video" class="bg-video">
+        <source src="videos/categegory.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
     <header>
         <h1>Father Borromeo Library</h1>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="home.html">Categories</a></li>
+                <li><a href="home.html" class="active">Categories</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
@@ -20,28 +26,23 @@
     </header>
 
     <main>
-        <section class="hero home-hero">
-            <video autoplay muted loop id="bg-video">
-                <source src="videos/categegory.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-            <div class="hero-content">
-                <h2>Choose a Category</h2>
-                <div class="category-buttons">
-                    <a href="spirituality.html" class="category-btn">Spirituality</a>
-                    <a href="filipiniana.html" class="category-btn">Filipiniana</a>
-                    <a href="theology.html" class="category-btn">Theology</a>
-                    <a href="general-reference.html" class="category-btn">General Reference</a>
-                    <a href="periodical.html" class="category-btn">Periodical</a>
-                    <a href="special-collection.html" class="category-btn">Special Collection</a>
-                    <a href="religion.html" class="category-btn">Religion</a>
-                </div>
+        <div class="hero-content">
+            <h2>Choose a Category</h2>
+            <div class="category-buttons">
+                <a href="spirituality.html" class="category-btn">Spirituality</a>
+                <a href="filipiniana.html" class="category-btn">Filipiniana</a>
+                <a href="theology.html" class="category-btn">Theology</a>
+                <a href="general-reference.html" class="category-btn">General Reference</a>
+                <a href="periodical.html" class="category-btn">Periodical</a>
+                <a href="special-collection.html" class="category-btn">Special Collection</a>
+                <a href="religion.html" class="category-btn">Religion</a>
             </div>
-        </section>
+        </div>
     </main>
 
     <footer>
         <p>&copy; 2025 Father Borromeo Library. All rights reserved.</p>
     </footer>
+
 </body>
 </html>
