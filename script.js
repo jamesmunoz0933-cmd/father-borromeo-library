@@ -38,5 +38,3 @@ fetch("data/library_collection")
         table.appendChild(tbody);
     })
     .catch(err => console.error("Failed to fetch JSON:", err));
-
-
