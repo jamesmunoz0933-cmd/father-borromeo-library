@@ -139,4 +139,47 @@ footer {
     padding: 20px 0;
     background: rgba(255,255,255,0.95);
 }
+/* Only for index.html */
+body.home-body {
+    min-height: 100vh;
+    color: #333;
+    background-image: url('images/james.jpeg'); /* your image path */
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;         /* make it cover entire screen */
+    background-attachment: scroll;  /* mobile-friendly */
+    position: relative;
+}
+
+/* Optional overlay for text readability */
+body.home-body::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(255, 255, 255, 0.3); /* adjust opacity if needed */
+    z-index: 0;
+}
+
+/* Hero content above overlay */
+body.home-body .hero-content {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body.home-body .hero-content h2 { font-size: 28px; }
+    body.home-body .hero-content p { font-size: 14px; }
+    body.home-body .btn { padding: 8px 16px; font-size: 13px; }
+}
+
+@media (max-width: 480px) {
+    body.home-body .hero-content h2 { font-size: 24px; }
+    body.home-body .hero-content p { font-size: 12px; }
+    body.home-body .btn { padding: 6px 12px; font-size: 12px; }
+}
+
 
