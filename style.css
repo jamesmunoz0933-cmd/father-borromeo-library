@@ -18,7 +18,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(0, 0, 0, 0);
     padding: 15px 30px;
     display: flex;
     justify-content: space-between;
@@ -181,5 +181,6 @@ body.home-body .hero-content {
     body.home-body .hero-content p { font-size: 12px; }
     body.home-body .btn { padding: 6px 12px; font-size: 12px; }
 }
+
 
 
