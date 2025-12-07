@@ -1,22 +1,19 @@
-
 console.log("JS is loaded!");
+
 fetch("data/library_collection.json")
-
-
-
-
-
-
-    .then(res => res.json())
+    .then(res => {
+        if (!res.ok) throw new Error("HTTP error " + res.status);
+        return res.json();
+    })
     .then(data => {
         if (!data || !data.length) return;
 
-        const table = document.createElement("table");
-        table.classList.add("data-table"); // Use your CSS styling
+        const table = document.getElementById("filipinianaTable");
 
         const thead = document.createElement("thead");
         const tbody = document.createElement("tbody");
 
+        // Create table headers
         const headers = Object.keys(data[0]);
         const headerRow = document.createElement("tr");
         headers.forEach(h => {
@@ -26,6 +23,7 @@ fetch("data/library_collection.json")
         });
         thead.appendChild(headerRow);
 
+        // Create table rows
         data.forEach(row => {
             const tr = document.createElement("tr");
             headers.forEach(h => {
@@ -38,8 +36,6 @@ fetch("data/library_collection.json")
 
         table.appendChild(thead);
         table.appendChild(tbody);
-
-        const container = document.querySelector(".page-container");
-        container.appendChild(table);
     })
-    .catch(err => console.error(err));
+    .catch(err => console.error("Failed to fetch JSON:", err));
+
