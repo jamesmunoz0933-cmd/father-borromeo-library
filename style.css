@@ -157,7 +157,6 @@ body.home-body::before {
     position: absolute;
     top: 0; left: 0;
     width: 100%; height: 100%;
-    background: rgba(255, 255, 255, 0.3); /* adjust opacity if needed */
     z-index: 0;
 }
 
@@ -181,6 +180,7 @@ body.home-body .hero-content {
     body.home-body .hero-content p { font-size: 12px; }
     body.home-body .btn { padding: 6px 12px; font-size: 12px; }
 }
+
 
 
 
