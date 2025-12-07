@@ -1,4 +1,4 @@
-console.log("JS is loaded!");
+
 
 fetch("data/library_collection")
     .then(res => {
@@ -38,3 +38,4 @@ fetch("data/library_collection")
         table.appendChild(tbody);
     })
     .catch(err => console.error("Failed to fetch JSON:", err));
+
