@@ -1,7 +1,7 @@
 console.log("JS is loaded!");
 
 // Fetch JSON file
-fetch("data/library_collection")
+fetch("data/library_collection.json")
     .then(res => {
         if (!res.ok) throw new Error("HTTP error " + res.status);
         return res.json();
@@ -10,7 +10,7 @@ fetch("data/library_collection")
         if (!data || !data.length) return;
 
         const table = document.createElement("table");
-        table.classList.add("data-table"); // apply CSS style
+        table.classList.add("data-table");
 
         const thead = document.createElement("thead");
         const tbody = document.createElement("tbody");
@@ -41,7 +41,7 @@ fetch("data/library_collection")
 
         // Append table to page container
         const container = document.querySelector(".page-container");
-        container.appendChild(table);
+        if (container) container.appendChild(table);
     })
     .catch(err => console.error("Failed to fetch JSON:", err));
 
